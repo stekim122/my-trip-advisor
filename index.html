@@ -2,92 +2,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Trip Advisor</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f4f7f5;
-            color: #333;
-        }
-        header {
-            background: #075b45;
-            color: white;
-            padding: 25px;
-            text-align: center;
-        }
-        nav {
-            background: #063d30;
-            padding: 15px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 12px;
-            text-decoration: none;
-        }
-        .hero {
-            padding: 80px 20px;
-            text-align: center;
-            background: #dcefe6;
-        }
-        .hero h2 {
-            font-size: 35px;
-        }
-        button {
-            background: #075b45;
-            color: white;
-            padding: 13px 25px;
-            border: none;
-            border-radius: 5px;
-        }
-        .content {
-            padding: 30px;
-            text-align: center;
-        }
-        footer {
-            background: #063d30;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Trip Advisor | Explore Kenya</title>
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: #26352c;
+    line-height: 1.6;
+}
+header {
+    background: #123c2b;
+    color: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+header h1 {
+    font-size: 25px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+.hero {
+    background: linear-gradient(#0007,#0007),
+    url('https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1600');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 130px 20px;
+}
+.hero h2 {
+    font-size: 44px;
+    margin-bottom: 15px;
+}
+.hero p {
+    font-size: 19px;
+    margin-bottom: 25px;
+}
+.btn {
+    display: inline-block;
+    background: #d49b37;
+    color: white;
+    padding: 13px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+section {
+    padding: 65px 7%;
+    text-align: center;
+}
+.section-title {
+    font-size: 30px;
+    margin-bottom: 12px;
+    color: #174b34;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+    gap: 25px;
+    margin-top: 35px;
+}
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 14px #0002;
+    text-align: left;
+}
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+.card-content {
+    padding: 20px;
+}
+.card h3 {
+    color: #174b34;
+    margin-bottom: 8px;
+}
+.packages {
+    background: #eef4ee;
+}
+footer {
+    background: #123c2b;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+</style>
 </head>
 <body>
 
 <header>
-    <h1>My Trip Advisor</h1>
-    <p>Discover Kenya. Explore the World.</p>
+<h1>My Trip Advisor</h1>
+<nav>
+<a href="#home">Home</a>
+<a href="#destinations">Destinations</a>
+<a href="#packages">Packages</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
-<nav>
-    <a href="#home">Home</a>
-    <a href="#destinations">Destinations</a>
-    <a href="#contact">Contact</a>
-</nav>
+<div class="hero" id="home">
+<h2>Discover the Magic of Kenya</h2>
+<p>Explore beautiful destinations and unforgettable adventures.</p>
+<a href="#destinations" class="btn">Explore Destinations</a>
+</div>
 
-<section class="hero" id="home">
-    <h2>Your Journey Begins Here</h2>
-    <p>Discover amazing destinations and unforgettable adventures.</p>
-    <button onclick="alert('Welcome to My Trip Advisor!')">
-        Explore Now
-    </button>
+<section id="destinations">
+<h2 class="section-title">Explore Our Destinations</h2>
+<p>Experience the beauty of Africa with us.</p>
+
+<div class="cards">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=700" alt="African safari">
+<div class="card-content">
+<h3>Maasai Mara</h3>
+<p>Discover wildlife, beautiful landscapes and the famous wildebeest migration.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=700" alt="African elephants">
+<div class="card-content">
+<h3>Amboseli</h3>
+<p>Enjoy spectacular views of elephants and Mount Kilimanjaro.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=700" alt="Tropical beach">
+<div class="card-content">
+<h3>Diani Beach</h3>
+<p>Relax on beautiful white sandy beaches and enjoy the ocean.</p>
+</div>
+</div>
+</div>
 </section>
 
-<section class="content" id="destinations">
-    <h2>Explore Destinations</h2>
-    <p>Maasai Mara | Amboseli | Diani Beach | Mount Kenya</p>
+<section class="packages" id="packages">
+<h2 class="section-title">Our Tour Packages</h2>
+<p>Adventure, relaxation and unforgettable experiences.</p>
+<div class="cards">
+<div class="card-content">
+<h3>Safari Adventures</h3>
+<p>Wildlife viewing and guided safari experiences.</p>
+</div>
+<div class="card-content">
+<h3>Beach Holidays</h3>
+<p>Relaxing coastal holidays and ocean adventures.</p>
+</div>
+<div class="card-content">
+<h3>Custom Tours</h3>
+<p>Travel plans designed around your interests.</p>
+</div>
+</div>
 </section>
 
-<section class="content" id="contact">
-    <h2>Contact Us</h2>
-    <p>Plan your next adventure with us.</p>
+<section id="contact">
+<h2 class="section-title">Plan Your Next Adventure</h2>
+<p>Contact us to enquire about your next trip.</p>
+<br>
+<a class="btn" href="https://wa.me/254700000000?text=Hello%20My%20Trip%20Advisor%2C%20I%20would%20like%20to%20plan%20a%20trip.">Chat on WhatsApp</a>
 </section>
 
 <footer>
-    <p>© 2026 My Trip Advisor. All rights reserved.</p>
+<p>© 2026 My Trip Advisor | Explore Kenya</p>
+<p>Discover. Experience. Remember.</p>
 </footer>
 
 </body>
