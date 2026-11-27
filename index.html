@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +9,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+html {
+    scroll-behavior: smooth;
 }
 body {
     font-family: Arial, sans-serif;
@@ -33,8 +35,11 @@ nav a {
     text-decoration: none;
     margin: 10px;
 }
+nav a:hover {
+    color: #d49b37;
+}
 .hero {
-    background: linear-gradient(#0007,#0007),
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
     url('https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1600');
     background-size: cover;
     background-position: center;
@@ -58,6 +63,10 @@ nav a {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    margin-top: 10px;
+}
+.btn:hover {
+    background: #b88328;
 }
 section {
     padding: 65px 7%;
@@ -70,7 +79,7 @@ section {
 }
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 25px;
     margin-top: 35px;
 }
@@ -78,8 +87,10 @@ section {
     background: white;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 3px 14px #0002;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.12);
     text-align: left;
+    display: flex;
+    flex-direction: column;
 }
 .card img {
     width: 100%;
@@ -88,138 +99,113 @@ section {
 }
 .card-content {
     padding: 20px;
+    flex-grow: 1;
 }
 .card h3 {
     color: #174b34;
     margin-bottom: 8px;
 }
-.packages {
+.alt-bg {
     background: #eef4ee;
+}
+.contact-info {
+    margin-top: 18px;
 }
 footer {
     background: #123c2b;
     color: white;
     text-align: center;
-    padding: 30px;
+    padding: 30px 7%;
 }
 </style>
 </head>
 <body>
 
 <header>
-<h1>Kim's Trip Advisor</h1>
-<nav>
-<a href="#home">Home</a>
-<a href="#destinations">Destinations</a>
-<a href="#packages">Packages</a>
-<a href="#travel-essentials">Travel Essentials</a>
-<a href="#travel-guides">Travel Guides</a>
-<a href="#contact">Contact</a>
-</nav>
+  <h1>Kim's Trip Advisor</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#destinations">Destinations</a>
+    <a href="#packages">Packages</a>
+    <a href="#travel-essentials">Travel Essentials</a>
+    <a href="#travel-guides">Travel Guides</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <div class="hero" id="home">
-<h2>Discover the Magic of Kenya</h2>
-<p>Explore beautiful destinations and unforgettable adventures.</p>
-<a href="#destinations" class="btn">Explore Destinations</a>
+  <h2>Discover the Magic of Kenya</h2>
+  <p>Explore beautiful destinations and unforgettable adventures.</p>
+  <a href="#destinations" class="btn">Explore Destinations</a>
 </div>
 
 <section id="destinations">
-<h2 class="section-title">Explore Our Destinations</h2>
-<p>Experience the beauty of Africa with us.</p>
+  <h2 class="section-title">Explore Our Destinations</h2>
+  <p>Experience the beauty of Africa with us.</p>
 
-<div class="cards">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=700" alt="African safari">
-<div class="card-content">
-<h3>Maasai Mara</h3>
-<p>Discover wildlife, beautiful landscapes and the famous wildebeest migration.</p>
-</div>
-</div>
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=700" alt="African safari">
+      <div class="card-content">
+        <h3>Maasai Mara</h3>
+        <p>Discover wildlife, beautiful landscapes and the famous wildebeest migration.</p>
+      </div>
+    </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=700" alt="African elephants">
-<div class="card-content">
-<h3>Amboseli</h3>
-<p>Enjoy spectacular views of elephants and Mount Kilimanjaro.</p>
-</div>
-</div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=700" alt="African elephants">
+      <div class="card-content">
+        <h3>Amboseli</h3>
+        <p>Enjoy spectacular views of elephants and Mount Kilimanjaro.</p>
+      </div>
+    </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=700" alt="Tropical beach">
-<div class="card-content">
-<h3>Diani Beach</h3>
-<p>Relax on beautiful white sandy beaches and enjoy the ocean.</p>
-</div>
-</div>
-</div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=700" alt="Tropical beach">
+      <div class="card-content">
+        <h3>Diani Beach</h3>
+        <p>Relax on beautiful white sandy beaches and enjoy the ocean.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="packages" id="packages">
-<h2 class="section-title">Our Tour Packages</h2>
-<p>Adventure, relaxation and unforgettable experiences.</p>
-<div class="cards">
-<div class="card-content">
-<h3>Safari Adventures</h3>
-<p>Wildlife viewing and guided safari experiences.</p>
-</div>
-<div class="card-content">
-<h3>Beach Holidays</h3>
-<p>Relaxing coastal holidays and ocean adventures.</p>
-</div>
-<div class="card-content">
-<h3>Custom Tours</h3>
-<p>Travel plans designed around your interests.</p>
-</div>
-</div>
+<section class="alt-bg" id="packages">
+  <h2 class="section-title">Our Tour Packages</h2>
+  <p>Adventure, relaxation and unforgettable experiences.</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-content">
+        <h3>Safari Adventures</h3>
+        <p>Wildlife viewing and guided safari experiences.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-content">
+        <h3>Beach Holidays</h3>
+        <p>Relaxing coastal holidays and ocean adventures.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-content">
+        <h3>Custom Tours</h3>
+        <p>Travel plans designed around your interests.</p>
+      </div>
+    </div>
+  </div>
 </section>
-
-<section id="contact">
-<h2 class="section-title">Plan Your Next Adventure</h2>
-<p>Contact us to enquire about your next trip.</p>
-<br>
-<a class="btn" href="https://wa.me/254791620459">
-Chat on WhatsApp
-</a>
-
-<p>Phone: 0791620459</p>
-
-<p>
-Email:
-<a href="mailto:Stekimani746@gmail.com">
-Stekimani746@gmail.com
-</a>
-</p>
-</section>
-<footer>
-<p>© 2026 My Trip Advisor | Explore Kenya</p>
-<p>Discover. Experience. Remember.</p>
-
-<p style="margin-top:15px;">
-Some links on this website may be affiliate links.
-We may earn a commission from qualifying purchases
-at no additional cost to you.
-</p>
-
-<p style="margin-top:10px;">
-<a href="privacy.html" style="color:white;">
-Privacy Policy
-</a>
-</p>
-</footer>
 
 <section id="travel-essentials">
-  <h2>Travel Essentials</h2>
+  <h2 class="section-title">Travel Essentials</h2>
   <p>Discover useful travel products to make every journey easier and more enjoyable.</p>
 
   <div class="cards">
-
     <div class="card">
       <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800" alt="Travel backpack">
       <div class="card-content">
         <h3>Travel Backpacks</h3>
         <p>Explore backpacks suitable for adventures, weekend trips and international travel.</p>
-        <p><strong>Price:</strong> Check current listing.</p>
+        <p style="margin-top:8px;"><strong>Price:</strong> Check current listing.</p>
         <a class="btn" href="https://www.amazon.com/s?k=travel+backpacks" target="_blank" rel="noopener">Explore Backpacks</a>
       </div>
     </div>
@@ -229,7 +215,7 @@ Privacy Policy
       <div class="card-content">
         <h3>Travel Cameras</h3>
         <p>Find cameras to capture beautiful memories and exciting destinations.</p>
-        <p><strong>Price:</strong> Check current listing.</p>
+        <p style="margin-top:8px;"><strong>Price:</strong> Check current listing.</p>
         <a class="btn" href="https://www.amazon.com/s?k=travel+cameras" target="_blank" rel="noopener">Explore Cameras</a>
       </div>
     </div>
@@ -239,55 +225,71 @@ Privacy Policy
       <div class="card-content">
         <h3>Travel Luggage</h3>
         <p>Discover luggage and suitcases for comfortable and organised journeys.</p>
-        <p><strong>Price:</strong> Check current listing.</p>
+        <p style="margin-top:8px;"><strong>Price:</strong> Check current listing.</p>
         <a class="btn" href="https://www.amazon.com/s?k=travel+luggage" target="_blank" rel="noopener">Explore Luggage</a>
       </div>
     </div>
-
   </div>
 </section>
 
+<section class="alt-bg" id="travel-guides">
+  <h2 class="section-title">Travel Guides & Advice</h2>
+  <p>Practical travel knowledge to help you plan better journeys.</p>
 
-
-<section id="travel-guides" style="padding:50px 20px;background:#fff;">
-  <div style="max-width:1100px;margin:auto;">
-    <h2 style="text-align:center;color:#24543b;">
-      Travel Guides & Advice
-    </h2>
-
-    <p style="text-align:center;">
-      Practical travel knowledge to help you plan better journeys.
-    </p>
-
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;">
-
-      <article style="padding:22px;background:#f4f7f4;border-radius:12px;">
+  <div class="cards">
+    <article class="card">
+      <div class="card-content">
         <h3>Planning Your First Safari</h3>
-        <p>Learn about safari preparation, park fees,
-        accommodation and wildlife experiences in Kenya.</p>
-      </article>
+        <p>Learn about safari preparation, park fees, accommodation and wildlife experiences in Kenya.</p>
+      </div>
+    </article>
 
-      <article style="padding:22px;background:#f4f7f4;border-radius:12px;">
+    <article class="card">
+      <div class="card-content">
         <h3>International Travel Tips</h3>
-        <p>Understand passports, travel documents,
-        luggage preparation and airport procedures.</p>
-      </article>
+        <p>Understand passports, travel documents, luggage preparation and airport procedures.</p>
+      </div>
+    </article>
 
-      <article style="padding:22px;background:#f4f7f4;border-radius:12px;">
+    <article class="card">
+      <div class="card-content">
         <h3>How to Travel on a Budget</h3>
-        <p>Discover practical ways to manage your
-        travel expenses and save money.</p>
-      </article>
+        <p>Discover practical ways to manage your travel expenses and save money.</p>
+      </div>
+    </article>
 
-      <article style="padding:22px;background:#f4f7f4;border-radius:12px;">
+    <article class="card">
+      <div class="card-content">
         <h3>Choosing Travel Equipment</h3>
-        <p>Learn how to select backpacks, luggage,
-        cameras and other travel accessories.</p>
-      </article>
-
-    </div>
+        <p>Learn how to select backpacks, luggage, cameras and other travel accessories.</p>
+      </div>
+    </article>
   </div>
 </section>
+
+<section id="contact">
+  <h2 class="section-title">Plan Your Next Adventure</h2>
+  <p>Contact us to enquire about your next trip.</p>
+  <a class="btn" href="https://wa.me/254791620459" target="_blank" rel="noopener">Chat on WhatsApp</a>
+
+  <div class="contact-info">
+    <p>Phone: 0791620459</p>
+    <p>Email: <a href="mailto:Stekimani746@gmail.com">Stekimani746@gmail.com</a></p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Kim's Trip Advisor | Explore Kenya</p>
+  <p>Discover. Experience. Remember.</p>
+
+  <p style="margin-top:15px; font-size: 14px; opacity: 0.9;">
+    Some links on this website may be affiliate links. We may earn a commission from qualifying purchases at no additional cost to you.
+  </p>
+
+  <p style="margin-top:10px;">
+    <a href="privacy.html" style="color:white;">Privacy Policy</a>
+  </p>
+</footer>
 
 </body>
 </html>
